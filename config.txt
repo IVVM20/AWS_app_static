@@ -4,5 +4,6 @@ yum install -y httpd
 yum install -y wget
 chkconfig httpd on
 cd /var/www/html
-wget https://github.com/IVVM20/AWS_app_static/tree/master/static
+wget wget https://github.com/IVVM20/AWS_app_static/archive/master.zip
+cd ./AWS_app_static-master
 service httpd start
