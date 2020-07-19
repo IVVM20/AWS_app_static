@@ -6,4 +6,6 @@ chkconfig httpd on
 cd /var/www/html
 wget wget https://github.com/IVVM20/AWS_app_static/archive/master.zip
 cd ./AWS_app_static-master
+unzip ./master.zip
+cp -a ./AWS_app_static-master/static/. /var/www/html/
 service httpd start
