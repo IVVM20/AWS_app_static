@@ -1,12 +1,13 @@
 #!/bin/bash
 yum update -y
-yum install -y httpd wget php
+yum install -y httpd wget php git
 
 chkconfig httpd on
 cd /var/www/html
 wget wget https://github.com/IVVM20/AWS_app_static/archive/master.zip
 unzip ./master.zip
 cp -a ./AWS_app_static-master/static/. /var/www/html/
+mv /var/www/html/htaccess /var/www/html/.htaccess
 
 service httpd start
 sudo systemctl enable httpd
